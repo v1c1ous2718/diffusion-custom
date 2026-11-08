@@ -1,0 +1,310 @@
+{
+ "blip_diffusion": {
+  "context_acc": 0.3958333333333333,
+  "per_context": {
+   "snow": 0.25,
+   "beach": 0.5,
+   "kitchen": 1.0,
+   "jungle": 0.625,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "full_lr5e-5_s0050": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "full_lr5e-5_s0100": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "full_lr5e-5_s0200": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.125,
+   "kitchen": 0.875,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "full_lr5e-5_s0400": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "full_lr5e-5_s0800": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "guidance_12.0": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "guidance_15.0": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "guidance_3.0": {
+  "context_acc": 0.1875,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.125,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "guidance_5.0": {
+  "context_acc": 0.1875,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.125
+  }
+ },
+ "guidance_7.5": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "guidance_9.5": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "kv_lr1e-5_s0050": {
+  "context_acc": 0.7083333333333334,
+  "per_context": {
+   "snow": 0.75,
+   "beach": 0.875,
+   "kitchen": 1.0,
+   "jungle": 0.875,
+   "space": 0.0,
+   "watercolor": 0.75
+  }
+ },
+ "kv_lr1e-5_s0100": {
+  "context_acc": 0.6875,
+  "per_context": {
+   "snow": 0.625,
+   "beach": 1.0,
+   "kitchen": 1.0,
+   "jungle": 1.0,
+   "space": 0.0,
+   "watercolor": 0.5
+  }
+ },
+ "kv_lr1e-5_s0200": {
+  "context_acc": 0.6458333333333334,
+  "per_context": {
+   "snow": 0.625,
+   "beach": 1.0,
+   "kitchen": 1.0,
+   "jungle": 0.875,
+   "space": 0.0,
+   "watercolor": 0.375
+  }
+ },
+ "kv_lr1e-5_s0400": {
+  "context_acc": 0.4583333333333333,
+  "per_context": {
+   "snow": 0.125,
+   "beach": 0.75,
+   "kitchen": 1.0,
+   "jungle": 0.375,
+   "space": 0.0,
+   "watercolor": 0.5
+  }
+ },
+ "kv_lr1e-5_s0800": {
+  "context_acc": 0.375,
+  "per_context": {
+   "snow": 0.125,
+   "beach": 0.5,
+   "kitchen": 1.0,
+   "jungle": 0.25,
+   "space": 0.0,
+   "watercolor": 0.375
+  }
+ },
+ "kv_lr5e-5_noaug_s0050": {
+  "context_acc": 0.375,
+  "per_context": {
+   "snow": 0.125,
+   "beach": 0.25,
+   "kitchen": 1.0,
+   "jungle": 0.125,
+   "space": 0.0,
+   "watercolor": 0.75
+  }
+ },
+ "kv_lr5e-5_noaug_s0100": {
+  "context_acc": 0.22916666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.375
+  }
+ },
+ "kv_lr5e-5_noaug_s0200": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "kv_lr5e-5_noaug_s0400": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "kv_lr5e-5_noaug_s0800": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "kv_lr5e-5_s0050": {
+  "context_acc": 0.6041666666666666,
+  "per_context": {
+   "snow": 0.5,
+   "beach": 1.0,
+   "kitchen": 1.0,
+   "jungle": 0.875,
+   "space": 0.0,
+   "watercolor": 0.25
+  }
+ },
+ "kv_lr5e-5_s0100": {
+  "context_acc": 0.25,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.25,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.25
+  }
+ },
+ "kv_lr5e-5_s0200": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "kv_lr5e-5_s0400": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "kv_lr5e-5_s0800": {
+  "context_acc": 0.16666666666666666,
+  "per_context": {
+   "snow": 0.0,
+   "beach": 0.0,
+   "kitchen": 1.0,
+   "jungle": 0.0,
+   "space": 0.0,
+   "watercolor": 0.0
+  }
+ },
+ "sd_baseline": {
+  "context_acc": 0.6666666666666666,
+  "per_context": {
+   "snow": 0.5,
+   "beach": 1.0,
+   "kitchen": 1.0,
+   "jungle": 0.625,
+   "space": 0.0,
+   "watercolor": 0.875
+  }
+ }
+}

@@ -1,0 +1,1 @@
+{"tag": "sd_baseline", "ckpt": null, "guidance": 9.5, "steps": 50, "sampler": "DDIM eta=0", "sec_per_image": 5.3502190709114075}

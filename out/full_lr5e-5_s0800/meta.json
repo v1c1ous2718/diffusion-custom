@@ -1,0 +1,1 @@
+{"tag": "full_lr5e-5_s0800", "ckpt": "/home/vicious/diffusion-custom/ckpt/full_lr5e-5/step_0800", "guidance": 9.5, "steps": 50, "sampler": "DDIM eta=0", "sec_per_image": 4.9079422901074095}
