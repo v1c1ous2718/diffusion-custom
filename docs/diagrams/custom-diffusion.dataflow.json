@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "Custom Diffusion on SD 1.5: what is trained, and what it learned",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "viewBox": [
+      860,
+      520
+    ],
+    "legend": {
+      "entries": {
+        "emphasis": {
+          "label": "sampling path"
+        },
+        "default": {
+          "label": "conditioning"
+        },
+        "dashed": {
+          "label": "fine-tuning only"
+        }
+      }
+    }
+  },
+  "stages": [
+    {
+      "label": "Input"
+    },
+    {
+      "label": "Condition"
+    },
+    {
+      "label": "Denoise"
+    },
+    {
+      "label": "Output"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "prompt",
+      "type": "frontend",
+      "label": "Prompt",
+      "sublabel": "<new1> carving + scene",
+      "stage": 0,
+      "row": 0,
+      "width": 152
+    },
+    {
+      "id": "noise",
+      "type": "frontend",
+      "label": "Latent noise",
+      "sublabel": "seeds 0-7, shared",
+      "stage": 0,
+      "row": 1,
+      "width": 152
+    },
+    {
+      "id": "photos",
+      "type": "external",
+      "label": "4 subject photos",
+      "sublabel": "few backgrounds",
+      "stage": 0,
+      "row": 2,
+      "width": 152
+    },
+    {
+      "id": "clip",
+      "type": "backend",
+      "label": "CLIP text encoder",
+      "sublabel": "only <new1> row trained",
+      "stage": 1,
+      "row": 0,
+      "width": 152
+    },
+    {
+      "id": "kv",
+      "type": "security",
+      "label": "Cross-attn K, V",
+      "sublabel": "19.2 M trained params",
+      "stage": 2,
+      "row": 0,
+      "width": 152
+    },
+    {
+      "id": "unet",
+      "type": "backend",
+      "label": "UNet, frozen fp16",
+      "sublabel": "DDIM 50 steps, cfg 9.5",
+      "stage": 2,
+      "row": 1,
+      "width": 152
+    },
+    {
+      "id": "vae",
+      "type": "database",
+      "label": "VAE decoder",
+      "sublabel": "48 images per setting",
+      "stage": 3,
+      "row": 1,
+      "width": 152
+    }
+  ],
+  "flows": [
+    {
+      "id": "tokens",
+      "from": "prompt",
+      "to": "clip",
+      "label": "tokens",
+      "variant": "default"
+    },
+    {
+      "id": "text-emb",
+      "from": "clip",
+      "to": "kv",
+      "label": "text embeddings",
+      "variant": "default",
+      "labelAt": [
+        423,
+        118
+      ]
+    },
+    {
+      "id": "attn",
+      "from": "kv",
+      "to": "unet",
+      "label": "16 attn layers",
+      "variant": "default",
+      "labelAt": [
+        530,
+        228
+      ]
+    },
+    {
+      "id": "zt",
+      "from": "noise",
+      "to": "unet",
+      "label": "z_T",
+      "variant": "emphasis"
+    },
+    {
+      "id": "loss",
+      "from": "photos",
+      "to": "unet",
+      "label": "loss trains K, V, <new1>",
+      "variant": "dashed",
+      "fromSide": "right",
+      "toSide": "bottom",
+      "via": [
+        [
+          530,
+          385
+        ]
+      ]
+    },
+    {
+      "id": "z0",
+      "from": "unet",
+      "to": "vae",
+      "label": "z_0",
+      "variant": "emphasis"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "rose",
+      "title": "HW09 default memorizes",
+      "items": [
+        "lr 5e-5, 200 steps: DINO 0.663, scene accuracy 0.167",
+        "CLIP classifies every image as the training scene; 0.167 is chance"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Smaller LR keeps the scene",
+      "items": [
+        "lr 1e-5, 200 steps: scene accuracy 0.646 (plain SD 0.667)",
+        "DINO 0.535 and CLIP-T 0.380, the best prompt match"
+      ]
+    },
+    {
+      "dot": "orange",
+      "title": "Two fixes to the homework code",
+      "items": [
+        "AdamW decayed all ~49k token rows; now only <new1> changes",
+        "diffusers 0.33 silently skipped the K/V weights on load"
+      ]
+    }
+  ]
+}

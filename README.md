@@ -27,6 +27,12 @@ Two issues in the homework code are fixed:
 
 Limitations: one subject, one training seed, and the whole-image metrics are not subject-masked.
 
+## Diagram
+
+What Custom Diffusion trains inside SD 1.5, annotated with the measured results. Interactive HTML: [`docs/diagrams/custom-diffusion.html`](docs/diagrams/custom-diffusion.html).
+
+![Custom Diffusion](docs/diagrams/custom-diffusion.png)
+
 ```bash
 uv sync
 git clone https://github.com/hsichelin/GenAI-ML-2025-HW9.git data/hw9
