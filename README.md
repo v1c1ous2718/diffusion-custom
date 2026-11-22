@@ -27,6 +27,20 @@ Two issues in the homework code are fixed:
 
 Limitations: one subject, one training seed, and the whole-image metrics are not subject-masked.
 
+## Figures
+
+![fidelity vs editability](report/figs/tradeoff_context.png)
+
+Each line is one training configuration; the numbers are training steps. DINO compares whole images, so a model
+that copies the training background scores higher. The CLIP 6-way scene accuracy catches that: the lr 5e-5
+checkpoints from 100–200 steps on sit at chance (1/6). lr 1e-5 at 200 steps keeps scene accuracy at 0.65 (plain
+SD 1.5: 0.67) while DINO rises from 0.26 to 0.54.
+
+![generated grid](report/figs/grid.png)
+
+Seed 0 for each scene; top row: the 4 training photos. The lr 5e-5 rows keep the same desk or sofa whatever the
+prompt asks for.
+
 ## Diagram
 
 What Custom Diffusion trains inside SD 1.5, annotated with the measured results. Interactive HTML: [`docs/diagrams/custom-diffusion.html`](docs/diagrams/custom-diffusion.html).
